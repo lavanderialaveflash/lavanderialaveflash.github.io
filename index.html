@@ -234,7 +234,7 @@ footer a:hover{color:var(--accent-text)}
         <a class="btn out" href="https://wa.me/5493424725161?text=Hola%2C%20quisiera%20solicitar%20un%20presupuesto%20para%20mi%20empresa" target="_blank" rel="noopener">Hablar por WhatsApp</a>
       </div>
       <ul class="ticks">
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Habilitación municipal y 5 años de trayectoria</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Habilitación municipal y más de <span data-anios>5</span> años de trayectoria</li>
         <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Lavadoras industriales de 10, 15 y 25 kg</li>
         <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Camioneta furgón exclusiva para empresas</li>
       </ul>
@@ -245,7 +245,7 @@ footer a:hover{color:var(--accent-text)}
 
 <div class="metrics w rv">
   <div class="row">
-    <div class="m"><b>5 años</b><span>de trayectoria en Santa Fe</span></div>
+    <div class="m"><b>+<span data-anios>5</span> años</b><span>de trayectoria en Santa Fe</span></div>
     <div class="m"><b>Logística propia</b><span>retiro y entrega para empresas</span></div>
     <div class="m"><b>Trazabilidad</b><span>cada partida identificada</span></div>
     <div class="m"><b>Habilitación municipal</b><span>local habilitado</span></div>
@@ -389,6 +389,8 @@ footer a:hover{color:var(--accent-text)}
 </a>
 
 <script>
+// Años de trayectoria: se actualiza solo cada 1 de enero (inicio de actividad: 2021)
+(function(){var n=new Date().getFullYear()-2021;if(n>=5){document.querySelectorAll("[data-anios]").forEach(function(e){e.textContent=n})}})();
 (function(){
   var f=document.getElementById('qf'),a=document.getElementById('q-send');
   function build(){
